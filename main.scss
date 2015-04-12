@@ -104,8 +104,12 @@ img#fiona{
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 }
+#intro{
+	h2{
+		font-weight: normal;
+	}
 
-	#intro::before{
+	&::before{
 		display: block;
 		content: "";
 		position: absolute;
@@ -117,27 +121,25 @@ img#fiona{
 		@include transition(.7s);
 	}
 
-		#intro.first::before{
+	&.first::before{
 		width: 15%;
-
 	}
 
-		#intro::after{
-			content: "";
-			height: 0;
-			width: 4px;
-			position: absolute;
-			right: 80%;
-			top: 50%;
-			background-color: $red;
-			@include transition(.7s);
-		}
+	&::after{
+		content: "";
+		height: 0;
+		width: 4px;
+		position: absolute;
+		right: 80%;
+		top: 50%;
+		background-color: $red;
+		@include transition(.7s);
+	}
 
-		#intro.first::after{
-			height: 50%;
-		}
-
-
+	&.first::after{
+		height: 50%;
+	}
+}
 
 /*section skills*/
 #skills{
@@ -181,8 +183,10 @@ img#fiona{
 		border: 2px solid transparent;
 		border-radius: 50%;
 		overflow: hidden;
+		-webkit-transform:rotate(0deg);
 
 		span{
+			color: transparent;
 			position: absolute;
 			bottom: 0;
 			font-size: 19px;

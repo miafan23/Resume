@@ -50,6 +50,8 @@ img#fiona {
   -moz-border-radius: 50%;
   border-radius: 50%; }
 
+#intro h2 {
+  font-weight: normal; }
 #intro::before {
   display: block;
   content: "";
@@ -63,10 +65,8 @@ img#fiona {
   -moz-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
-
 #intro.first::before {
   width: 15%; }
-
 #intro::after {
   content: "";
   height: 0;
@@ -79,7 +79,6 @@ img#fiona {
   -moz-transition: all 0.7s ease-out;
   -o-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out; }
-
 #intro.first::after {
   height: 50%; }
 
@@ -123,8 +122,10 @@ img#fiona {
   height: 100px;
   border: 2px solid transparent;
   border-radius: 50%;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-transform: rotate(0deg); }
   #skills .skill-level-wrapper li span {
+    color: transparent;
     position: absolute;
     bottom: 0;
     font-size: 19px;
