@@ -1,0 +1,272 @@
+* {
+  font-family: "microsoft jhenghei","sans-serif"; }
+
+.center {
+  text-align: center; }
+
+ul {
+  list-style: none; }
+
+a:link, a:visited, a:hover {
+  text-decoration: none;
+  color: #454545;
+  position: relative; }
+a:hover {
+  color: #F04F47; }
+  a:hover::before {
+    transform: scaleX(1); }
+a::before {
+  content: "";
+  background-color: #F04F47;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.appear {
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+  .appear.active {
+    opacity: 1; }
+
+h1 {
+  float: left;
+  margin-left: 20%;
+  width: 100%;
+  padding: 30px; }
+
+img#fiona {
+  border: 2px solid #fff;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+#intro::before {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 65%;
+  top: 50%;
+  width: 0;
+  height: 4px;
+  background-color: #F04F47;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+#intro.first::before {
+  width: 15%; }
+
+#intro::after {
+  content: "";
+  height: 0;
+  width: 4px;
+  position: absolute;
+  right: 80%;
+  top: 50%;
+  background-color: #F04F47;
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out; }
+
+#intro.first::after {
+  height: 50%; }
+
+/*section skills*/
+#skills h1 {
+  color: #F9FAE1; }
+#skills::before {
+  content: "";
+  height: 0;
+  width: 4px;
+  background-color: #F9FAE1;
+  position: absolute;
+  top: 0;
+  right: 80%;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
+#skills.active::before {
+  height: 100%; }
+#skills .fp-tableCell {
+  display: block; }
+#skills ul .skill-name {
+  position: absolute;
+  bottom: 48%;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  line-height: 100px;
+  text-align: center; }
+  #skills ul .skill-name.active {
+    bottom: 50%; }
+#skills .skill-level-wrapper li {
+  position: absolute;
+  bottom: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  overflow: hidden; }
+  #skills .skill-level-wrapper li span {
+    position: absolute;
+    bottom: 0;
+    font-size: 19px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    height: 0;
+    background-color: #e4f6cb;
+    z-index: 1; }
+    #skills .skill-level-wrapper li span.active {
+      height: 80px; }
+
+#projects {
+  color: #F04F47; }
+  #projects::before {
+    content: "";
+    height: 0;
+    width: 4px;
+    background-color: #F04F47;
+    position: absolute;
+    top: 0;
+    right: 80%;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out; }
+  #projects.active::before {
+    height: 100%; }
+  #projects div.pro {
+    width: 100%;
+    float: left;
+    margin-left: 20%;
+    padding: 40px 0 20px 30px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; }
+    #projects div.pro.active {
+      padding: 20px 0 20px 30px; }
+  #projects .fp-tableCell {
+    display: block; }
+
+#education {
+  color: #F9FAE1; }
+  #education::before {
+    content: "";
+    height: 0;
+    width: 4px;
+    background-color: #F9FAE1;
+    position: absolute;
+    top: 0;
+    right: 80%;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    -o-transition: all 1s ease-out;
+    transition: all 1s ease-out; }
+  #education.active::before {
+    height: 100%; }
+  #education .fp-tableCell {
+    display: block; }
+  #education .edu1 {
+    position: absolute;
+    left: 400px;
+    bottom: 200px; }
+    #education .edu1::before {
+      content: "";
+      background-color: #F9FAE1;
+      height: 2px;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: -80px;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+    #education .edu1::after {
+      content: "";
+      background-color: #F9FAE1;
+      width: 2px;
+      height: 0;
+      position: absolute;
+      bottom: -80px;
+      left: 600px;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+    #education .edu1.active::before {
+      width: 600px; }
+    #education .edu1.active::after {
+      height: 300px; }
+  #education .edu2 {
+    position: absolute;
+    left: 1000px;
+    bottom: 500px; }
+    #education .edu2::before {
+      content: "";
+      background-color: #F9FAE1;
+      height: 2px;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: -80px;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+    #education .edu2::after {
+      content: "";
+      background-color: #F9FAE1;
+      width: 2px;
+      height: 0;
+      position: absolute;
+      bottom: -80px;
+      left: 600px;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all 1s ease-out;
+      -o-transition: all 1s ease-out;
+      transition: all 1s ease-out; }
+    #education .edu2.active::before {
+      width: 600px; }
+    #education .edu2.active::after {
+      height: 300px; }
+
+#contact .fp-tableCell {
+  display: block; }
+#contact h1 {
+  color: #F04F47; }
+#contact::before {
+  content: "";
+  height: 0;
+  width: 4px;
+  background-color: #F04F47;
+  position: absolute;
+  top: 0;
+  right: 80%;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out; }
+#contact.active::before {
+  height: 100%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,299 @@
+$leftdis: 20%;
+$white: #F9FAE1;
+$red: #F04F47;
+
+@mixin transition($time){
+	-webkit-transition: all $time ease-out;
+	-moz-transition: all $time ease-out;
+	-o-transition: all $time ease-out;
+	transition: all $time ease-out;
+}
+
+@mixin leftLine($color){
+	content: "";
+	height: 0;
+	width: 4px;
+	background-color: $color;
+	position: absolute;
+	top: 0;
+	right: 100%-$leftdis;
+	@include transition(1s);
+}
+
+@mixin edulinerow{
+	content: "";
+	background-color: $white;
+	height: 2px;
+	width: 0;
+	position: absolute;
+	left: 0;
+	bottom: -80px;
+	@include transition(1s);
+}
+
+@mixin edulinecol{
+	content: "";
+	background-color: $white;
+	width: 2px;
+	height: 0;
+	position: absolute;
+	bottom: -80px;
+	left: 600px;
+	@include transition(1s);	
+}
+
+*{
+	font-family: "microsoft jhenghei","sans-serif";
+}
+
+.center{
+	text-align: center;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	&:link,&:visited,&:hover{
+		text-decoration: none;
+		color: #454545;
+		position: relative;
+	}
+
+	&:hover{
+		color:$red;
+		&::before{
+			transform: scaleX(1);
+		}
+	}
+
+	&::before{
+		content: "";
+		background-color:$red;
+		width: 100%;
+		height: 1px;
+		transform: scaleX(0);
+		position: absolute;
+		bottom: 0;
+		@include transition(.3s)
+	}
+}
+
+.appear{
+	opacity: 0;
+	@include transition(.7s);
+	&.active{
+		opacity: 1;
+	}
+}
+
+
+
+h1{
+	float: left;
+	margin-left: $leftdis;
+	width: 100%;
+	padding: 30px;
+}
+
+img#fiona{
+	border: 2px solid #fff;
+	-webkit-border-radius: 50%;
+	-o-border-radius:50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+	#intro::before{
+		display: block;
+		content: "";
+		position: absolute;
+		right: 65%;
+		top: 50%;
+		width: 0;
+		height: 4px;
+		background-color: $red;
+		@include transition(.7s);
+	}
+
+		#intro.first::before{
+		width: 15%;
+
+	}
+
+		#intro::after{
+			content: "";
+			height: 0;
+			width: 4px;
+			position: absolute;
+			right: 80%;
+			top: 50%;
+			background-color: $red;
+			@include transition(.7s);
+		}
+
+		#intro.first::after{
+			height: 50%;
+		}
+
+
+
+/*section skills*/
+#skills{
+	h1{
+		color: $white;
+	}
+	&::before{
+		@include leftLine($white);
+	}
+
+	&.active::before{
+		height: 100%;
+	}
+
+	.fp-tableCell{
+	display: block;
+}
+
+	ul .skill-name{
+		position: absolute;
+		bottom: 48%;
+		list-style: none;
+		width: 100px;
+		height: 100px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		overflow: hidden;
+		z-index: 2;
+		line-height: 100px;
+		text-align: center;
+		&.active{
+			bottom: 50%;
+		}
+	}
+
+	.skill-level-wrapper li{
+		position: absolute;
+		bottom: 50%;
+		width: 100px;
+		height: 100px;
+		border: 2px solid transparent;
+		border-radius: 50%;
+		overflow: hidden;
+
+		span{
+			position: absolute;
+			bottom: 0;
+			font-size: 19px;
+			display: block;
+			width: 100px;
+			height: 100px;
+			height: 0;
+			background-color: #e4f6cb;
+			z-index: 1;
+			&.active{
+				height: 80px;
+			}
+		}
+
+	}
+}
+
+#projects{
+	color:$red;
+	&::before{
+		@include leftLine($red);
+	}
+	&.active::before{
+		height: 100%;
+	}
+	div.pro{
+		width: 100%;
+		float: left;
+		margin-left: $leftdis;
+		padding: 40px 0 20px 30px;
+		@include transition(.3s);
+		&.active{
+			padding: 20px 0 20px 30px;
+		}
+	}
+
+
+	.fp-tableCell{
+		display: block;
+	}
+}
+
+#education{
+	color: $white;
+	&::before{
+		@include leftLine($white);
+	}
+	&.active::before{
+		height: 100%;
+	}
+
+	.fp-tableCell{
+		display: block;
+	}
+	.edu1{
+		position: absolute;
+		left: 400px;
+		bottom: 200px;
+		&::before{
+			@include edulinerow
+		};
+
+		&::after{
+			@include edulinecol;
+		}
+
+		&.active::before{
+			width: 600px;
+		}
+
+		&.active::after{
+			height: 300px;
+		}
+	}
+
+	.edu2{
+		position: absolute;
+		left: 1000px;
+		bottom: 500px;
+		&::before{
+			@include edulinerow;
+		};
+
+		&::after{
+			@include edulinecol;
+		}
+
+		&.active{
+			&::before{
+				width: 600px;
+			}
+
+			&::after{
+				height: 300px;
+			};
+		}
+	}
+}
+
+#contact{
+	.fp-tableCell{
+		display: block;
+	}
+	h1{
+		color: $red;
+	}
+	&::before{
+		@include leftLine($red);
+	}
+
+	&.active::before{
+		height: 100%;
+	}
+}
