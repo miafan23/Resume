@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>樊梦莹的简历</title>
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="main.css" />
-	<script src="jquery.js"></script>
-	<script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+    <meta charset="UTF-8">
+    <title>樊梦莹的简历</title>
+    <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
 <div id="fullpage">
-	<div id="intro" class="section center">
-		<img id="fiona" src="fiona.jpg" alt="fiona">
-		<h2 class=" ">樊梦莹</h2>
-		<a class=" " href="mailto:fiona_fanmy@163.com">fiona_fanmy@163.com</a>
-	</div>
+    <div id="intro" class="section center">
+        <img id="fiona" src="img/fiona.jpg" alt="fiona">
+        <h2 class=" ">樊梦莹</h2>
+        <a class=" " href="mailto:fiona_fanmy@163.com">fiona_fanmy@163.com</a>
+    </div>
 
-	<div id="skills" class="section">
-			<h1 class=" ">个人技能</h1>
-			<ul>
-				<li class="appear order1 skill-name">HTML</li>
-				<li class="appear order1 skill-name">CSS</li>
-				<li class="appear order1 skill-name">JavaScript</li>
-				<li class="appear order1 skill-name">Bootstrap</li>
-				<li class="appear order1 skill-name">jQuery</li>
-			</ul>
-			<ul class="skill-level-wrapper">
-				<li class="skill-level"><span class="appear order2">html</span></li>
-				<li class="skill-level"><span class="appear order2">css</span></li>
-				<li class="skill-level"><span class="appear order2">javascript</span></li>
-				<li class="skill-level"><span class="appear order2">bootstrap</span></li>
-				<li class="skill-level"><span class="appear order2">jquery</span></li>
-			</ul>
-	</div>
+    <div id="skills" class="section white-font center">
+            <h1 class="">个人技能</h1>
+            <div class="skills-ball">
+                <canvas id="html" class="ball"></canvas>
+                <canvas id="css" class="ball"></canvas>
+                <canvas id="javascript" class="ball"></canvas>
+                <canvas id="jquery" class="ball"></canvas>
+                <canvas id="design" class="ball"></canvas>
+                <canvas id="ps" class="ball"></canvas>
+            </div>
+    </div>
 
-	<div id="projects" class="section">
-		<h1 class=" ">项目经历</h1>
-		<div class="pro pro1 appear order1">个人主页</div>
-		<div class="pro pro2 appear order2">个人主页</div>
-	</div>
+    <div id="projects" class="section red-font center">
+        <h1 class=" ">项目经历</h1>
+        <div class="pro pro1 appear order1">
+        	<a href="https://github.com/fiona23/water-bubble-chart" class="logo-img"><img class="prj-logo" src="img/water.png" alt="water-bubble-chart"></a>
+        	<h3><a href="https://github.com/fiona23/water-bubble-chart">water-bubble-chart</a></h3>
+        	<p>一个jquery水球图表的插件, 可以用来反应你某项技能的掌握情况或者某项任务的完成情况，使用canvas完成。</p>
+        </div>
+        <div class="pro pro2 appear order2">
+        	<a href="https://github.com/fiona23/GTD_todo_list" class="logo-img"><img src="img/gtd.png" alt="water-bubble-chart"></a>
+        	<h3><a href="https://github.com/fiona23/GTD_todo_list">GTD Tools</a></h3>
+        	<p>百度IFE前端培训的最后大任务，一个GTD的SPA（单页web应用），使用了Localstorage, 模块化编程，前端工程化等技术</p>
+        </div>
+    </div>
 
-	<div id="education" class="section">
-		<h1 class=" ">教育背景</h1>
-		<div class="edu1 appear order1">
-			<h3>电子科技大学 学士</h3>
-			<p>电子科学与技术</p>
-		</div>
-		<div class="edu2 appear order2">
-			<h3>上海交大 硕士</h3>
-			<p>集成电路工程</p>
-		</div>
-	</div>
+    <div id="education" class="section white-font center">
+        <h1 class="">教育背景</h1>
+        <div class="edu1 appear order1">
+            <h2>电子科技大学 学士</h2>
+            <p>电子科学与技术</p>
+        </div>
+        <div class="edu2 appear order2">
+            <h2>上海交通大学 硕士</h2>
+            <p>集成电路工程</p>
+        </div>
+    </div>
 
-	<div id="contact" class="section">
-		<h1>联系我吧~</h1>
-		<a class="appear order1" href="https://github.com/fiona23"></a>
-		<a class="appear order1" href="http://www.douban.com/people/milamiyaff/"></a>
-	</div>
+    <div id="contact" class="section red-font center">
+        <h1>联系我吧</h1>
+        
+            <a href="https://github.com/fiona23" target="_blank" class="icon-small icon-github" title="github"></a>
+            <a href="http://weibo.com/2098325442/profile?topnav=1&wvr=6" class="icon-small icon-weibo" target="_blank" title="新浪微博"></a>
+            <a href="http://www.douban.com/people/milamiyaff/" class="icon-small icon-douban" target="_blank" title="我的豆瓣"></a>
+            <a href="mailto:fiona_fanmy@163.com" class="icon-small icon-email" title="给我发邮件"></a>
+ 
 </div>
 
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/waterbubble.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,93 @@
+$leftdis: 20%;
+$white: #F9FAE1;
+$red: #F04F47;
+
+@mixin transition($time){
+	-webkit-transition: all $time ease-out;
+	-moz-transition: all $time ease-out;
+	-o-transition: all $time ease-out;
+	transition: all $time ease-out;
+}
+
+
+
+*{
+	font-family: "microsoft jhenghei","sans-serif";
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+.center{
+	text-align: center;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	@include transition(.6s);
+	&:link,&:visited,&:hover{
+		text-decoration: none;
+		color: #454545;
+		position: relative;
+	}
+
+	&:hover{
+		color:$red;
+		&::before{
+			transform: scaleX(1);
+		}
+	}
+
+	&::before{
+		content: "";
+		background-color:$red;
+		width: 100%;
+		height: 1px;
+		transform: scaleX(0);
+		position: absolute;
+		bottom: 0;
+		@include transition(.3s)
+	}
+}
+
+h1 {
+	font-size: 6rem;
+}
+
+#fiona {
+	border-radius: 50%;
+}
+
+.white-font {
+	color: $white;
+}
+
+.red-font {
+	color: $red;
+}
+
+.skills-ball {
+	height: 300px;
+}
+
+.ball {
+	margin: 20px;
+}
+
+.logo-img, .icon-small{
+	&:hover {
+		opacity: 0.6;
+		&::before{
+			transform: scaleX(0);
+		}
+	}
+
+}
