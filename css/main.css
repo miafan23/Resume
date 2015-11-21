@@ -62,4 +62,32 @@ h1 {
   .logo-img:hover::before, .icon-small:hover::before {
     transform: scaleX(0); }
 
-/*# sourceMappingURL=main.css.map */
+.logo-img {
+  float: left;  
+}
+
+.logo-img img {
+  width: 60px;
+  height: 60px;
+  margin: 20px 40px 20px 0;
+}
+
+.row {
+  overflow: hidden;
+  /*width: 600px;*/
+  width: 50%;
+  margin: 30px auto;
+  /*padding: 0 150px;*/
+}
+
+
+.proj-desc {
+  float: left;
+  width: 80%;
+}
+
+@media (max-width: 782px){
+  .row {
+    width: 80%;
+  }
+}

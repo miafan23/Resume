@@ -7,12 +7,12 @@
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-       ga('create', 'UA-66365958-1', 'auto');
-       ga('send', 'pageview');
+       // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       // ga('create', 'UA-66365958-1', 'auto');
+       // ga('send', 'pageview');
     </script>
 </head>
 <body>
@@ -35,18 +35,30 @@
             </div>
     </div>
 
-    <div id="projects" class="section red-font center">
-        <h1 class=" ">项目经历</h1>
-        <div class="pro pro1 appear order1">
+    <div id="projects" class="section red-font">
+        <h1 class="center">项目经历</h1>
+        <div class="project-wrapper row">
+            <a href="http://fiona23.github.io/ji/" class="logo-img"><img src="img/ji_2.png" alt="water-bubble-chart"></a>
+            <div class="proj-desc">
+                <h3><a href="http://fiona23.github.io/ji/">几</a></h3>
+                <p>一个帮助养成好习惯的小网站。最初是因为自己一直有打卡的习惯，但是纸质逐渐变得不方便，后来又受<a target="_blank" href="http://www.zhihu.com/question/25365330/answer/72851867">这个问题</a>的启发后，决定写这样一个工具。使用AngularJS框架完成。现在已经积累了一点用户啦，最开心的就是当是有人告诉我很喜欢它时候。</p>
+            </div>
+        </div>
+        <div class="project-wrapper row">
         	<a href="https://github.com/fiona23/water-bubble-chart" class="logo-img"><img class="prj-logo" src="img/water.png" alt="water-bubble-chart"></a>
-        	<h3><a href="https://github.com/fiona23/water-bubble-chart">water-bubble-chart</a></h3>
-        	<p>一个jquery水球图表的插件, 可以用来反应你某项技能的掌握情况或者某项任务的完成情况，使用canvas完成。</p>
+        	<div class="proj-desc">
+                <h3><a href="https://github.com/fiona23/water-bubble-chart">water-bubble-chart</a></h3>
+                <p>一个jquery水球图表的插件, 可以用来反应你某项技能的掌握情况或者某项任务的完成情况，使用canvas完成。简历第二页技能掌握情况就是使用了这个插件。</p>   
+            </div>
         </div>
-        <div class="pro pro2 appear order2">
-        	<a href="https://github.com/fiona23/GTD_todo_list" class="logo-img"><img src="img/gtd.png" alt="water-bubble-chart"></a>
-        	<h3><a href="https://github.com/fiona23/GTD_todo_list">GTD Tools</a></h3>
-        	<p>百度IFE前端培训的最后大任务，一个GTD的SPA（单页web应用），使用了Localstorage, 模块化编程，前端工程化等技术</p>
+        <div class="project-wrapper row">
+        	<a href="http://fiona23.github.io/GTD_todo_list/dist/index.html" class="logo-img"><img src="img/gtd.png" alt="GTD"></a>
+        	<div class="proj-desc">
+                <h3><a href="http://fiona23.github.io/GTD_todo_list/dist/index.html">GTD Tools</a></h3>
+                <p>百度IFE前端培训的最后大任务，一个GTD的SPA（单页web应用），使用了Localstorage, 模块化编程，前端工程化等技术。并且通过了培训终期答辩。</p>   
+            </div>
         </div>
+
     </div>
 
     <div id="education" class="section white-font center">
@@ -63,6 +75,7 @@
 
     <div id="contact" class="section red-font center">
         <h1>联系我吧</h1>
+            <h2>如果有在上海地区的前端实习岗位，赶快通过下面联系方式联系我吧！</h2>
             <a href="https://github.com/fiona23" target="_blank" class="icon-small icon-github" title="github"></a>
             <a href="http://weibo.com/2098325442/profile?topnav=1&wvr=6" class="icon-small icon-weibo" target="_blank" title="新浪微博"></a>
             <a href="http://www.douban.com/people/milamiyaff/" class="icon-small icon-douban" target="_blank" title="我的豆瓣"></a>
