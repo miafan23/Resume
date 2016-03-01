@@ -8,14 +8,14 @@ $(document).ready(function() {
     				var speed = 500
 				    var windowWidth =  $(window).width()
 				    var radius = 60;
-						var fontSize = radius / 5;
 						if(windowWidth < 600){
 							radius = 50;
 						}
 						if(windowWidth < 350){
 							radius = 40;
 						}
-    				if(index == 1){
+						var fontSize = Math.floor(radius / 3.3);
+				if(index == 1){
 					}
 					if(index == 2){
 						setTimeout(function () {
