@@ -1,11 +1,20 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
-    	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage','lastPage'],
+    	anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage','fifthPage', 'lastPage'],
 		menu: '#myMenu',
 		navigation: true,
-    	sectionsColor: ['#F9FAE1', '#F04F47', '#F9FAE1', '#F04F47', '#F9FAE1','#F04F47' ],
+    	sectionsColor: ['#F9FAE1', '#F04F47', '#F9FAE1', '#F04F47', '#F9FAE1','#F04F47','#F9FAE1' ],
     	'afterLoad': function(anchorLink, index){
-    				var speed = 500;
+    				var speed = 500
+				    var windowWidth =  $(window).width()
+				    var radius = 60;
+						var fontSize = radius / 5;
+						if(windowWidth < 600){
+							radius = 50;
+						}
+						if(windowWidth < 350){
+							radius = 40;
+						}
     				if(index == 1){
 					}
 					if(index == 2){
@@ -18,55 +27,55 @@ $(document).ready(function() {
 						}, speed*2)
 
 						$('#html').waterbubble({
-							radius: 60,
+							radius: radius,
 							wave: false,
 							txt: 'HTML',
-							font:'bold 18px "microsoft Yahei"',
+							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.8
 						})
 						$('#css').waterbubble({
-							radius: 60,
+							radius: radius,
 							wave: false,
 							txt: 'CSS',
-							font:'bold 18px "microsoft Yahei"',
+							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.7
 						})
 						$('#javascript').waterbubble({
-							radius: 60,
+							radius: radius,
 							wave: false,
 							txt: 'JavaScript',
-							font:'bold 18px "microsoft Yahei"',
+							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.6
 						})
 						$('#jquery').waterbubble({
-							radius: 60,
+							radius: radius,
 							wave: false,
 							txt: 'jQuery',
-							font:'bold 18px "microsoft Yahei"',
+							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.5
 						})
 						$('#design').waterbubble({
-							radius: 60,
+							radius: radius,
 							wave: false,
 							txt: 'Design',
-							font:'bold 18px "microsoft Yahei"',
+							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.5
 						})
 						$('#ps').waterbubble({
-							radius: 60,
+							radius: radius,
 							wave: false,
 							txt: 'PhotoShop',
-							font:'bold 18px "microsoft Yahei"',
+							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.6
@@ -91,7 +100,7 @@ $(document).ready(function() {
 							$('#education').find('.order2').addClass('active')
 						}, speed*2)
 					}
-				},
+				}
 	});
 	
 	

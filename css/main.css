@@ -4,9 +4,6 @@
 html {
   font-size: 62.5%; }
 
-body {
-  font-size: 1.6rem; }
-
 .center {
   text-align: center; }
 
@@ -39,9 +36,6 @@ a {
     -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out; }
 
-h1 {
-  font-size: 6rem; }
-
 #fiona {
   border-radius: 50%; }
 
@@ -62,10 +56,6 @@ h1 {
   .logo-img:hover::before, .icon-small:hover::before {
     transform: scaleX(0); }
 
-.logo-img {
-  float: left;  
-}
-
 .logo-img img {
   width: 60px;
   height: 60px;
@@ -74,20 +64,35 @@ h1 {
 
 .row {
   overflow: hidden;
-  /*width: 600px;*/
-  width: 50%;
+  width: 80%;
   margin: 30px auto;
-  /*padding: 0 150px;*/
 }
 
+p {
+  font-size: 0.8em;
+}
+
+.project-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
 
 .proj-desc {
-  float: left;
-  width: 80%;
+  flex: 1;
 }
 
-@media (max-width: 782px){
-  .row {
-    width: 80%;
+@media (max-width: 650px){
+  body {
+    font-size: 0.8em;
+  }
+
+  #fiona {
+    width: 50%;
+  }
+
+  .logo-img img {
+    width: 40px;
+    height: 40px;
+    margin: 15px 30px 15px 0;
   }
 }

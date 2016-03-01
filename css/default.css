@@ -15,10 +15,11 @@ body::-moz-selection {
   color: #fff;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 2.2em;
+  margin: 1em auto;
 }
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.6em;
 }
 ul {
   list-style: none;
@@ -98,7 +99,7 @@ code {
 .icon-small {
   width: 32px;
   height: 32px;
-  background-image: url("../img/social_red.png");
+  background-image: url("../img/social.png");
   background-size: 160px 60px;
   display: inline-block;
   border-bottom: none;
