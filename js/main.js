@@ -71,14 +71,14 @@ $(document).ready(function() {
 							textColor: 'rgba(0, 0, 0, 0.8)',
 							data: 0.5
 						})
-						$('#ps').waterbubble({
+						$('#vue').waterbubble({
 							radius: radius,
 							wave: false,
-							txt: 'PhotoShop',
+							txt: 'Vue',
 							font:'bold ' + fontSize + 'px "microsoft Yahei"',
 							waterColor: '#F9FAE1',
 							textColor: 'rgba(0, 0, 0, 0.8)',
-							data: 0.6
+							data: 0.5
 						})
 					}
 					if(index == 3){
